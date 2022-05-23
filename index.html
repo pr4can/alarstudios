@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SPA</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css?_v=20220523151552">
+        <link rel="stylesheet" href="css/style.min.css?_v=20220523151552" />
+    </head>
+    <body>
+        <section class="users">
+            <div class="users__container container">
+                <h1 class="users__title">Пользователи</h1>
+                <div class="users__table table">
+                    <div class="table__head">
+                        <div class="table__row">
+                            <div class="table__column">Имя</div>
+                            <div class="table__column">Телефон</div>
+                            <div class="table__column">Действие</div>
+                        </div>
+                    </div>
+                    <div class="table__body"></div>                    
+                </div>
+                <form id="addUser" class="user__form form">
+                    <h2 class="form__title">Добавить нового пользователя</h2>
+                    <div class="form__row">
+                        <div class="form__inputs">
+                            <input name="name" type="text" placeholder="Имя">
+                            <input name="phone" type="tel" placeholder="Телефон">
+                        </div>                        
+                        <button type="submit" class="form__btn btn btn--success">Добавить</button>
+                    </div>
+                    <p class="form__error">Проверьте правильность ввода данных</p>                    
+                </form>
+            </div>
+        </section>
+        <script src="js/app.min.js?_v=20220523151552"></script>
+    </body>
+</html>

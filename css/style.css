@@ -1,0 +1,342 @@
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  font-family: Montserrat;
+  line-height: 1;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: normal;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.3s color, 0.3s background;
+  -o-transition: 0.3s color, 0.3s background;
+  transition: 0.3s color, 0.3s background;
+}
+
+.btn--delete {
+  border-color: #f51e0f;
+  color: #f51e0f;
+}
+
+.btn--delete:hover {
+  color: #ffffff;
+  background-color: #f51e0f;
+}
+
+.btn--edit {
+  border-color: #c78904;
+  color: #c78904;
+}
+
+.btn--edit:hover {
+  color: #ffffff;
+  background-color: #c78904;
+}
+
+.btn--success {
+  border-color: #035c00;
+  color: #035c00;
+}
+
+.btn--success:hover {
+  color: #ffffff;
+  background-color: #035c00;
+}
+
+.users {
+  padding: 60px 0;
+}
+
+.users__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  margin: 0 0 20px;
+}
+
+.users__table {
+  margin-bottom: 50px;
+}
+
+.table {
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.table__btn.btn--success {
+  display: none;
+}
+
+.table__head {
+  border-bottom: 1px solid #000;
+}
+
+.table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table__row:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.table__row--error > .table__column > input {
+  border-color: #f51e0f;
+}
+
+.table__row--edit > .table__column > input {
+  display: block;
+}
+
+.table__row--edit > .table__column > span {
+  display: none;
+}
+
+.table__row--edit .btn--edit {
+  display: none;
+}
+
+.table__row--edit .btn--success {
+  display: inline-block;
+}
+
+.table__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+  padding: 15px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.table__column:not(:last-child) {
+  border-right: 1px solid #000;
+}
+
+.table__column:nth-child(1),
+.table__column:nth-child(2) {
+  max-width: 30%;
+}
+
+.table__column:nth-child(3) {
+  max-width: 40%;
+}
+
+.table__column > input {
+  display: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 0 10px;
+  -webkit-transition: 0.3s padding, 0.3s border;
+  -o-transition: 0.3s padding, 0.3s border;
+  transition: 0.3s padding, 0.3s border;
+}
+
+.table__column > span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  margin: 0 0 20px;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+.form__inputs > input {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  width: 50%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #000;
+  border-right: none;
+}
+
+.form__inputs > input:nth-child(1) {
+  border-radius: 5px 0 0 5px;
+}
+
+.form__btn {
+  width: 40%;
+  height: 40px;
+  border-radius: 0 5px 5px 0;
+}
+
+.form__error {
+  display: none;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #f51e0f;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .table__head {
+    display: none;
+  }
+
+  .table__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .table__column:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px dotted #000;
+  }
+
+  .table__column:nth-child(1),
+  .table__column:nth-child(2) {
+    max-width: 100%;
+  }
+
+  .table__column:nth-child(3) {
+    max-width: 100%;
+  }
+
+  .form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form__inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+
+  .form__inputs > input {
+    width: 100%;
+    border-bottom: none;
+    border-right: 1px solid #000;
+  }
+
+  .form__inputs > input:not(:last-child) {
+    border-right: 1px solid #000;
+  }
+
+  .form__inputs > input:nth-child(1) {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .form__btn {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+}

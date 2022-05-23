@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  font-family: Montserrat;
+  line-height: 1;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: normal;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.3s color, 0.3s background;
+  -o-transition: 0.3s color, 0.3s background;
+  transition: 0.3s color, 0.3s background;
+}
+
+.btn--delete {
+  border-color: #f51e0f;
+  color: #f51e0f;
+}
+
+.btn--delete:hover {
+  color: #ffffff;
+  background-color: #f51e0f;
+}
+
+.btn--edit {
+  border-color: #c78904;
+  color: #c78904;
+}
+
+.btn--edit:hover {
+  color: #ffffff;
+  background-color: #c78904;
+}
+
+.btn--success {
+  border-color: #035c00;
+  color: #035c00;
+}
+
+.btn--success:hover {
+  color: #ffffff;
+  background-color: #035c00;
+}

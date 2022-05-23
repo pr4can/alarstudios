@@ -1,0 +1,123 @@
+.table {
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.table__btn.btn--success {
+  display: none;
+}
+
+.table__head {
+  border-bottom: 1px solid #000;
+}
+
+.table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table__row:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.table__row--error > .table__column > input {
+  border-color: #f51e0f;
+}
+
+.table__row--edit > .table__column > input {
+  display: block;
+}
+
+.table__row--edit > .table__column > span {
+  display: none;
+}
+
+.table__row--edit .btn--edit {
+  display: none;
+}
+
+.table__row--edit .btn--success {
+  display: inline-block;
+}
+
+.table__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+  padding: 15px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.table__column:not(:last-child) {
+  border-right: 1px solid #000;
+}
+
+.table__column:nth-child(1),
+.table__column:nth-child(2) {
+  max-width: 30%;
+}
+
+.table__column:nth-child(3) {
+  max-width: 40%;
+}
+
+.table__column > input {
+  display: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 0 10px;
+  -webkit-transition: 0.3s padding, 0.3s border;
+  -o-transition: 0.3s padding, 0.3s border;
+  transition: 0.3s padding, 0.3s border;
+}
+
+.table__column > span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .table__head {
+    display: none;
+  }
+
+  .table__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .table__column:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px dotted #000;
+  }
+
+  .table__column:nth-child(1),
+  .table__column:nth-child(2) {
+    max-width: 100%;
+  }
+
+  .table__column:nth-child(3) {
+    max-width: 100%;
+  }
+}
